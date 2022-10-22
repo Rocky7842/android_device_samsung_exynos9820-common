@@ -42,7 +42,10 @@ static inline const char* getBTDefaultName()
 
     if (!strcmp("d1", device))
         return "Galaxy Note10";
-
+    
+    if (!strcmp("d1x", device))
+        return "Galaxy Note10 5G";
+    
     if (!strcmp("d2s", device))
         return "Galaxy Note10+";
 
