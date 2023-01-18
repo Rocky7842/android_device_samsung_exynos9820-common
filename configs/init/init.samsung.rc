@@ -935,11 +935,11 @@ on boot
     chown system radio /sys/class/sensors/hidden_hole/hh_is_exist_efs
     chown system radio /sys/class/sensors/hidden_hole/hh_ext_prox_th
 
-# BATTERY
 on property:sys.boot_completed=1
+    # BATTERY
     write /sys/class/power_supply/battery/boot_completed "1"
 
-# GPU DVFS
+    # GPU DVFS
     chown system system /sys/kernel/gpu/gpu_freq_table
     chown system system /sys/kernel/gpu/gpu_governor
     chown system system /sys/kernel/gpu/gpu_max_clock

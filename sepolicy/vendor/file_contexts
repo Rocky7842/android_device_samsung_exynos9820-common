@@ -58,9 +58,14 @@
 /efs/usb_hw_param(/.*)?                      u:object_r:sec_efs_file:s0
 /efs/wv.keys                                 u:object_r:sec_efs_file:s0
 
+/mnt/vendor/efs/Battery(/.*)?                u:object_r:battery_efs_file:s0
 /mnt/vendor/efs/spen(/.*)?                   u:object_r:spen_efs_file:s0
 
 ## Sysfs
+# Battery
+/sys/class/power_supply(/.*)?                                 u:object_r:sysfs_batteryinfo:s0
+/sys/class/power_supply/battery(/.*)?                         u:object_r:sysfs_batteryinfo:s0
+
 # Block
 /sys/devices/platform/(.*)/block/sda/queue/discard_max_bytes  u:object_r:sysfs_block_writable:s0
 /sys/devices/platform/(.*)/block/mmcblk0/mmcblk0p[0-9]+/start u:object_r:sysfs_block:s0
@@ -77,6 +82,9 @@
 # S Pen
 /sys/devices/virtual/sec/sec_epen(/.*)?                       u:object_r:sysfs_spen:s0
 
+# Key
+/sys/devices/virtual/sec/sec_key(/.*)?                        u:object_r:sysfs_sec_key:s0
+
 # Sensors
 /sys/devices/platform/10970000.spi/spi_master/spi17/spi17.0(/.*)                  u:object_r:sysfs_iio:s0
 /sys/devices/platform/10970000.spi/spi_master/spi17/spi17.0(/.*)/poll_delay       u:object_r:sysfs_sensors_writable:s0
@@ -89,6 +97,10 @@
 
 # Wakeup
 /sys/devices/platform/(.*)/wakeup[0-9]*(/.*)?                                     u:object_r:sysfs_wakeup:s0
+
+## System
+# Charger
+/system/bin/lpm                             u:object_r:charger_exec:s0
 
 ## Vendor
 /(vendor|system/vendor)/bin/hw/gps.sh                                                               u:object_r:gpsd_exec:s0
