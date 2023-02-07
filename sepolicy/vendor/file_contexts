@@ -90,6 +90,10 @@
 # Wakeup
 /sys/devices/platform/(.*)/wakeup[0-9]*(/.*)?                                     u:object_r:sysfs_wakeup:s0
 
+## System
+# Charger
+/system/bin/lpm                             u:object_r:charger_exec:s0
+
 ## Vendor
 /(vendor|system/vendor)/bin/hw/gps.sh                                                               u:object_r:gpsd_exec:s0
 

@@ -984,8 +984,9 @@ on property:sys.boot_completed=1
     chmod 0644 /sys/kernel/gpu/gpu_min_clock
 
 # LPM
-service charger /system/bin/charger
+service charger /system/bin/lpm
     class sec-charger
-    user root
-    group system radio input
-    critical
+    user system
+    group system radio graphics input
+    capabilities SYS_BOOT
+    seclabel u:r:charger:s0
