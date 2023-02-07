@@ -57,7 +57,8 @@ def OTA_InstallEnd(info):
         modelsIncluded.append(model)
         version = info.input_zip.read("RADIO/version_%s" % model).decode('utf-8').splitlines()[0]
         info.script.AppendExtra('# Firmware update to %s for %s' % (version, model))
-        info.script.AppendExtra('ifelse (getprop("ro.boot.em.model") == "%s" &&' % model)
+        info.script.AppendExtra('ifelse (getprop("ro.twrp.boot") != "1" &&')
+        info.script.AppendExtra('getprop("ro.boot.em.model") == "%s" &&' % model)
         info.script.AppendExtra('exynos9820.verify_no_downgrade("%s") == "0" &&' % version)
         info.script.AppendExtra('getprop("ro.boot.bootloader") != "%s",' % version)
         info.script.Print('Updating firmware to %s for %s' % (version, model))
