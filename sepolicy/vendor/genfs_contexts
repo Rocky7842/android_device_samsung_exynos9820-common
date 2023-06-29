@@ -31,6 +31,7 @@ genfscon sysfs /devices/platform/15d70000.hsi2c/i2c-15/15-003b/power_supply/mfc-
 genfscon sysfs /devices/platform/15d70000.hsi2c/i2c-17/17-003b/power_supply/mfc-charger/type                            u:object_r:sysfs_battery:s0
 genfscon sysfs /devices/platform/15d70000.hsi2c/i2c-18/18-003b/power_supply/mfc-charger/type                            u:object_r:sysfs_battery:s0
 genfscon sysfs /devices/platform/sec-direct-charger/power_supply/sec-direct-charger/type                                u:object_r:sysfs_battery:s0
+genfscon sysfs /devices/platform/battery/power_supply/battery/charging_enabled                                          u:object_r:sysfs_battery_writable:s0
 genfscon sysfs /devices/platform/18500000.mali/dma_buf_gpu_mem                                                          u:object_r:sysfs_gpu:s0
 genfscon sysfs /devices/platform/18500000.mali/total_gpu_mem                                                            u:object_r:sysfs_gpu:s0
 genfscon sysfs /devices/platform/18500000.mali/kprcs                                                                    u:object_r:sysfs_gpu:s0
