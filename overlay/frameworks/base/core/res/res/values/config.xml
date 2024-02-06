@@ -979,4 +979,7 @@
         <item>xcbc(aes)</item>
         <item>rfc3686(ctr(aes))</item>
     </string-array>
+
+    <!-- Determines whether the shell features all run on another thread. -->
+    <bool name="config_enableShellMainThread">true</bool>
 </resources>
