@@ -76,6 +76,10 @@ system/etc/libnfc-nci.conf:vendor/etc/libnfc-nci.conf
 vendor/bin/cass
 vendor/etc/init/cass.rc
 vendor/etc/init/init.vendor.rilcommon.rc
+vendor/etc/locale/plmn_delta_eng.bin
+vendor/etc/locale/plmn_delta_zh-rCN.bin
+vendor/etc/locale/plmn_delta_zh-rHK.bin
+vendor/etc/locale/plmn_delta_zh-rTW.bin
 vendor/etc/plmn_delta.bin
 vendor/etc/plmn_delta_attaio.bin
 vendor/etc/plmn_delta_usagsm.bin
