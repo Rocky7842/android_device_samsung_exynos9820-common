@@ -16,12 +16,13 @@ import android.view.ViewGroup;
 
 import androidx.preference.Preference;
 import androidx.preference.Preference.OnPreferenceChangeListener;
-import androidx.preference.PreferenceFragment;
 import androidx.preference.PreferenceManager;
 import androidx.preference.SeekBarPreference;
 import androidx.preference.SwitchPreference;
 
-public class SettingsFragment extends PreferenceFragment {
+import com.android.settingslib.widget.SettingsBasePreferenceFragment;
+
+public class SettingsFragment extends SettingsBasePreferenceFragment {
 
     private SharedPreferences mSharedPrefs;
     private SwitchPreference mScreenOffUdfpsPreference;
