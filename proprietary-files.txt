@@ -1,6 +1,8 @@
 # Common proprietary files - from Samsung package version N975FXXS9HWHA, unless pinned
 
 ## Audio
+vendor/lib/lib_SoundBooster_ver1050.so
+vendor/lib64/lib_SoundBooster_ver1050.so
 vendor/etc/audio_board_info.xml
 vendor/etc/default_volume_tables.xml
 vendor/etc/usb_audio_policy_configuration.xml
